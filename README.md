@@ -1,40 +1,24 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# DoubleBackToCloseApp
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A lightweight and flexible Flutter widget for Android that prevents accidental app exits by requiring a double-tap on the back button.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Modern API**: Uses `PopScope` (compatible with Flutter 3.16+).
+- **Customizable**: Provide your own UI feedback (SnackBar, Toast, or Lottie).
+- **Conditional**: Control exactly when the interceptor is active (e.g., only on the Home screen).
+- **Platform Aware**: Automatically disables itself on iOS/macOS to respect system gestures.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Copy the `double_back_to_close_app.dart` file into your project or add it to your local packages.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+### Simple Implementation
 ```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
-# double_back
+DoubleBackToCloseApp(
+  child: Scaffold(
+    body: Center(child: Text("Home Screen")),
+  ),
+)
