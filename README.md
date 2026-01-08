@@ -22,3 +22,14 @@ DoubleBackToCloseApp(
     body: Center(child: Text("Home Screen")),
   ),
 )
+DoubleBackToCloseApp(
+  canPopCondition: () => myRouter.currentPath == '/main',
+  onFirstPop: (context) {
+    // Trigger custom snackbar and haptic feedback
+    HapticFeedback.lightImpact();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text("Tap once more to leave")),
+    );
+  },
+  child: const MainNavigator(),
+)
