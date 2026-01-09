@@ -1,6 +1,6 @@
 name: double_back
 description: A Flutter utility widget for Android that prevents accidental app closure by requiring a double-tap on the system back button.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/khurbanovrakhmiddin/double_back
 repository: https://github.com/khurbanovrakhmiddin/double_back
 
